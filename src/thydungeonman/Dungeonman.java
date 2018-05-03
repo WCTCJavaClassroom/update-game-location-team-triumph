@@ -80,6 +80,31 @@ public class Dungeonman {
     }
     
     public void atDennis(String input){
+        switch(input.toLowerCase()){
+                case "not dennis":
+                    goMain();
+                    break;
+                case "talk":
+                    System.out.println("You engage Dennis in leisurely discussion. Ye learns that his jimberjam was purchased on sale at a "
+                            + "discount market and that he enjoys pacing about nervously. You become bored and begin thinking about parapets.");
+                    break;
+                case "give trinket":
+                    if(trinket){
+                        System.out.println("A novel idea! You givst the TRINKET to Dennis and he happily agrees to tell you what parapets are."
+                                + " With this new knowledge, ye escapes from yon dungeon in order to search for new dungeons and to remain... "
+                                + "THY DUNGEONMAN!! You hath won!");
+                        gameOver();
+                       
+                    }else {
+                    System.out.println("Thou don'tst have a trinket to give. Go back to your tiny life.");
+                    }
+                    break;
+                
+                default:
+                    System.out.print(badInput());
+            }
+        
+        
         
     }
     
